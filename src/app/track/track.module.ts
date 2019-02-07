@@ -1,0 +1,28 @@
+import { WishlistComponent } from './wishlist/wishlist.component';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { CardcontainerComponent } from './cardcontainer/cardcontainer.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CardComponent } from './card/card.component';
+import { MatCardModule, MatIcon, MatIconModule, MatSnackBar, MatSnackBarModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
+import { TrackMaterialModule } from './track.material.module';
+
+
+@NgModule({
+  declarations: [HeaderComponent, FooterComponent, CardcontainerComponent, 
+                  CardComponent,WishlistComponent],
+  imports: [
+    CommonModule,
+    HttpClientModule,
+    MatCardModule,
+    MatIconModule,
+    FormsModule,
+    TrackMaterialModule
+  ],
+  exports: [HeaderComponent, FooterComponent, CardcontainerComponent, 
+            CardComponent,WishlistComponent]
+})
+export class TrackModule { }
